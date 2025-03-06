@@ -1,4 +1,12 @@
-import { FlatList, SafeAreaView, ScrollView, Text, View,Image } from "react-native";
+import {
+  FlatList,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+  Image,
+  Pressable,
+} from "react-native";
 import BoxIcon from "@/assets/images/box.svg";
 import ScannerIcon from "@/assets/images/scanner.svg";
 import AvatarIcon from "@/assets/images/Avatar.svg";
@@ -17,6 +25,7 @@ import BandLogo from "@/assets/images/Band.svg";
 import CardanoLogo from "@/assets/images/Cardano.svg";
 import TronLogo from "@/assets/images/Tron.svg";
 import TetherLogo from "@/assets/images/Tether.svg";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   const assets = [
@@ -33,6 +42,13 @@ export default function HomeScreen() {
       accronym: "ETH",
       value: "₹1,740.30",
       trend: "-2.35%",
+    },
+    {
+      Icon:BandLogo,
+      title: "Band",
+      accronym: "BAND",
+      value: "₹553.06",
+      trend: "-22.97%",
     },
     {
       Icon: CardanoLogo,
@@ -72,7 +88,11 @@ export default function HomeScreen() {
               </Text>
             </View>
             <View className="flex-row gap-x-[15px]">
-              <BoxIcon width={40} height={40} />
+              <Link href="/gift" asChild>
+                <Pressable>
+                  <BoxIcon width={40} height={40} />
+                </Pressable>
+              </Link>
               <ScannerIcon width={40} height={40} />
             </View>
           </View>
@@ -80,10 +100,7 @@ export default function HomeScreen() {
           {/* Card */}
           <View className="mt-14 bg-[#232138] p-10 rounded-[30px]">
             <View className="flex-row justify-between">
-              <Image
-                source={CardBackground}
-                className="w-[20px] h-[20px]"
-              />
+              <Image source={CardBackground} className="w-[20px] h-[20px]" />
               <View className="flex-col items-center gap-y-3.5">
                 <AvatarIcon width={70} height={70} />
                 <Text className="text-sm font-light text-white">
