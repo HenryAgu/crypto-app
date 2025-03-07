@@ -30,19 +30,19 @@ export default function GiftScreen() {
             <Text classNam="text-sm font-normal text-[#343A40]">
               Referal ID
             </Text>
-            <View>
+            <View className="border border-[#DFE2E4] rounded-[4px] p-2 flex-row items-center gap-x-2">
               <TextInput
-                className="border border-gray-300 rounded-md p-3 text-base"
+                className="text-sm text-[#6C757D] w-full h-full"
                 placeholder="Type here..."
                 value={text}
                 onChangeText={setText}
               />
-              <Pressable>Copy Code</Pressable>
+              <Pressable className="w-fit bg-[#0063F5] text-center p-2 text-xs rounded-[4px] text-white">Copy Code</Pressable>
             </View>
           </View>
-          <View>
-            <Text>Terms and Conditions Applied</Text>
-            <Pressable>Invite friends</Pressable>
+          <View className="mt-20 flex-col gap-y-10 items-center text-center">
+            <Text className="text-xs text-[#1D1B32] font-normal">Terms and Conditions Applied</Text>
+            <Pressable className="bg-[#0063F5] w-full text-[#F8F9FA] font-medium rounded-[10px] py-5">Invite friends</Pressable>
           </View>
         </View>
       </SafeAreaView>
