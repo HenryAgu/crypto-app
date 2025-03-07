@@ -32,7 +32,7 @@ export default function GiftScreen() {
             </Text>
             <View className="border border-[#DFE2E4] rounded-[4px] p-2 flex-row items-center gap-x-2">
               <TextInput
-                className="text-sm text-[#6C757D] w-full h-full"
+                className="text-sm text-[#6C757D] w-full h-full outline-white"
                 placeholder="Type here..."
                 value={text}
                 onChangeText={setText}
